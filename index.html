@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Taran Srikonda</title>
+  <link rel="stylesheet" href="styles/main1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="description" content="Portfolio of Taran Srikonda — Duke ECE/CS, earthquake early-warning research, AI/ML engineering, product design, and educational work." />
+</head>
+
+<body>
+
+<header>
+  <div class="container nav-container">
+    <a class="brand" href="/" aria-label="Home">Taran Srikonda</a>
+
+    <button class="hamburger" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul id="site-nav" class="nav__list" role="menubar">
+      <li><a href="about.html">About</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="index.html#contact" class="nav__cta">Contact</a></li>
+    </ul>
+
+    <nav class="nav-overlay">
+      <button class="close-btn" aria-label="Close menu">&times;</button>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero__inner">
+
+      <div class="hero__photo">
+        <img src="img/professionalphoto.png" alt="Taran Srikonda profile picture">
+      </div>
+
+      <div class="hero__content">
+        <h1 class="hero__title">Hi, I’m Taran — a Computer Scientist and Engineer.</h1>
+        <p class="hero__lede">
+          I am studying Electrical & Computer Engineering and Computer Science at Duke University, where I work across 
+          software and data engineering, artificial intelligence and machine learning, and product management.
+        </p>
+
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/taran-srikonda-ab4564234" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/tarans65" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:tsrikonda654@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="https://linktr.ee/Taran_Sr" target="_blank"> <i class="fas fa-link"></i> </a>
+
+          
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="resources">
+  <div class="container">
+    <h2 class="resources__title">What I Work On</h2>
+
+    <div class="work-grid">
+
+      <div class="work-card">
+        <i class="fa-solid fa-satellite-dish work-icon"></i>
+        <h3 class="work-title">Real-Time Systems</h3>
+        <p>
+          Building an earthquake early-warning system (EEWS) using Arduino sensors, Python Flask Backend, MQTT streaming,
+          and an HDF5 backend deployed in Nepal.
+        </p>
+        <a href="projects.html" class="work-link">Explore projects →</a>
+      </div>
+
+      <div class="work-card">
+        <i class="fa-solid fa-calculator work-icon"></i>
+        <h3 class="work-title">Computational Modeling</h3>
+        <p>
+          Mathematical and Computational modeling for Acute Myeloid Leukemia chemo-immunotherapy treatments using ODEs and NumPy to analyze treatment strategies.
+        </p>
+        <a href="projects.html#amlmodel" class="work-link">Explore projects →</a>
+      </div>
+
+
+      <div class="work-card">
+        <i class="fa-solid fa-mobile-screen work-icon"></i>
+        <h3 class="work-title">Product Design</h3>
+        <p> 
+          Lead developer for PennyPals, a cross-platform fintech app for managing shared expenses, subscriptions, and group payments with Express.js and React Native.
+        </p>
+        <a href="projects.html#pennypals" class="work-link">Explore projects →</a>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+<section id="contact">
+  <div class="contact-container">
+    <h2>Contact Me</h2>
+    <p class="contact-subtitle">Let’s connect — I’m always excited to collaborate, build, and learn.</p>
+
+    <form action="https://formspree.io/f/mqarlvpv" method="POST" class="contact-form">
+      <label>Name</label>
+      <input type="text" name="name" required>
+
+      <label>Email</label>
+      <input type="email" name="email" required>
+
+      <label>Message</label>
+      <textarea name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p class="direct-email">
+      Or email me directly at 
+      <a href="mailto:tsrikonda654@gmail.com">tsrikonda654@gmail.com</a>
+    </p>
+  </div>
+</section>
+
+
+</main>
+
+<footer>
+  <div class="footer__inner">
+
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/taran-srikonda-ab4564234" target="_blank">LinkedIn</a>
+      <a href="https://github.com/tarans65" target="_blank">GitHub</a>
+      <a href="mailto:tsrikonda654@gmail.com">Email</a>
+      <a href="https://linktr.ee/Taran_Sr" target="_blank">LinkTree</a>
+    </div>
+
+    <p class="footer-copy">© 2025 Taran Srikonda</p>
+
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navOverlay = document.querySelector('.nav-overlay');
+  const closeBtn = document.querySelector('.close-btn');
+
+  hamburger.addEventListener('click', () => {
+    navOverlay.classList.add('active');
+    hamburger.classList.add('hide');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    navOverlay.classList.remove('active');
+    hamburger.classList.remove('hide');
+  });
+</script>
+
+</body>
+</html>

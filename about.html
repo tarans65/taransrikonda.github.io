@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Taran Srikonda</title>
+  <meta name="description" content="About Taran Srikonda — Duke ECE/CS student working on EEWS technology, computational biology, and product development." />
+  <link rel="stylesheet" href="styles/main1.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Override timeline styles to create gaps between icons */
+    .timeline::before {
+      display: none !important;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: 12px;
+      top: 50px;
+      bottom: -2.2rem;
+      width: 3px;
+      background: #d0d7e2;
+      border-radius: 2px;
+      z-index: 0;
+    }
+
+    .timeline-item:last-child::before {
+      display: none;
+    }
+
+    .timeline-item .timeline-icon {
+      position: relative;
+      flex-shrink: 0;
+      z-index: 2;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav-container">
+      <a class="brand" href="index.html" aria-label="Home">Taran Srikonda</a>
+
+      <button class="hamburger" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav__list" role="menubar">
+        <li><a href="about.html">About</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a role="menuitem" href="index.html#contact" class="nav__cta">Contact</a></li>
+      </ul>
+
+      <nav class="nav-overlay">
+        <button class="close-btn" aria-label="Close menu">&times;</button>
+        <ul role="menubar">
+          <li><a href="about.html">About</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="about-hero">
+      <div class="container about-flex">
+        <img src="img/scientist.png" alt="Scientist illustration" class="about-illustration">
+
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>
+            Welcome! My name is Taran Srikonda, and I am double majoring in Electrical & Computer Engineering and Computer Science, along with a concentration in AI and Machine Learning, at Duke University,
+            where I work across software engineering, real-time sensor systems, data modeling,
+            product design, and technology policy.
+          </p>
+
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/taran-srikonda-ab4564234" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/tarans65" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:tsrikonda654@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://linktr.ee/Taran_Sr" target="_blank"><i class="fas fa-link"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="experience">
+      <h2 class="experience__title">Experience</h2>
+
+      <div class="timeline">
+
+        <!-- Duke Pratt -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <img src="img/PrattEngineeringAssistant.jpg" alt="Duke Pratt School of Engineering">
+          </div>
+          <div>
+            <div class="timeline-date">2024–Present</div>
+            <div class="timeline-content">
+              <h3>Duke Pratt School of Engineering</h3>
+              <p>Engineering 101 Teaching Assistant — Support lab instruction and course development in introductory engineering.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ESG -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <img src="img/dukeesg.jpg" alt="Engineering Student Government">
+          </div>
+          <div>
+            <div class="timeline-date">2024–Present</div>
+            <div class="timeline-content">
+              <h3>Engineering Student Government</h3>
+              <p>Executive Director — Lead community initiatives and expand student resources across Duke Engineering.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- KTM GeoLab -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <img src="img/KTMGEOLABPNG.png" alt="KTM GeoLab">
+          </div>
+          <div>
+            <div class="timeline-date">2024</div>
+            <div class="timeline-content">
+              <h3>KTM Geo Lab</h3>
+              <p>Earthquake Early-Warning Researcher — Built real-time sensor pipelines and supported seismic monitoring work.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Virginia Tech -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <img src="img/virginiatech.png" alt="Virginia Tech">
+          </div>
+          <div>
+            <div class="timeline-date">Summer 2024</div>
+            <div class="timeline-content">
+              <h3>Virginia Tech Mathematics Department</h3>
+              <p>Mathematical Modeling Researcher — Developed ODE-based models of acute myeloid leukemia for therapy simulation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Capital One -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <img src="img/CapitalOne.jpg" alt="Capital One">
+          </div>
+          <div>
+            <div class="timeline-date">2023</div>
+            <div class="timeline-content">
+              <h3>Capital One Tech Summit</h3>
+              <p>Software & Product Fellow — Built a cross-platform finance app (PennyPals) and explored product-focused engineering challenges.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer__inner">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/taran-srikonda-ab4564234" target="_blank">LinkedIn</a>
+        <a href="https://github.com/tarans65" target="_blank">GitHub</a>
+        <a href="mailto:tsrikonda654@gmail.com">Email</a>
+        <a href="https://linktr.ee/Taran_Sr" target="_blank">LinkTree</a>
+      </div>
+
+      <p class="footer-copy">© 2025 Taran Srikonda</p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navOverlay = document.querySelector('.nav-overlay');
+    const closeBtn = document.querySelector('.close-btn');
+
+    hamburger.addEventListener('click', () => {
+      navOverlay.classList.add('active');
+      hamburger.classList.add('hide');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      navOverlay.classList.remove('active');
+      hamburger.classList.remove('hide');
+    });
+  </script>
+
+</body>
+</html>

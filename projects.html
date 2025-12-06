@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Taran Srikonda</title>
+
+  <link rel="stylesheet" href="styles/main1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <meta name="description"
+    content="Engineering, software, modeling, and product projects by Taran Srikonda." />
+</head>
+
+<body>
+
+<header>
+  <div class="container nav-container">
+    <a class="brand" href="index.html">Taran Srikonda</a>
+
+    <button class="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav__list">
+      <li><a href="about.html">About</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a class="active" href="projects.html">Projects</a></li>
+      <li><a href="index.html#contact" class="nav__cta">Contact</a></li>
+    </ul>
+
+    <nav class="nav-overlay">
+      <button class="close-btn">&times;</button>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- BANNER LIKE VINCENT -->
+  <section class="project-banner">
+    <div class="container">
+      <div class="project-banner-box">
+        <h3>Explore My Projects</h3>
+        <p>Engineering tools, real-time systems, and computational models I’ve built and deployed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT GRID -->
+  <section class="project-section">
+    <div class="container">
+      <div class="project-grid-new">
+
+        <!-- EEW -->
+        <div class="proj-card">
+          <div class="proj-img">
+            <img src="img/EEW.png" alt="EEW System">
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags">
+              <span>Python</span><span>MQTT</span><span>HDF5</span>
+            </div>
+            <h3>Earthquake Early-Warning System (EEWS)</h3>
+            <p>A real-time seismic monitoring system using Arduino accelerometers, MQTT streaming, and an HDF5/Flask backend.</p>
+            <a class="proj-link" href="https://github.com/tarans65/Earthquake-Early-Warning-Detection-Project" target="_blank">
+              View on GitHub →
+            </a>
+          </div>
+        </div>
+
+        <!-- PennyPals -->
+        <div class="proj-card">
+          <div class="proj-img pennypals">
+            <img src="img/PennyPals.png" alt="PennyPals app">
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags">
+              <span>React Native</span><span>Express.js</span><span>Mobile</span>
+            </div>
+            <h3>PennyPals — Cross-Platform Finance App</h3>
+            <p>A mobile app for managing shared expenses, subscriptions, and payments with REST APIs, secure login, and real-time syncing.</p>
+            <a class="proj-link" href="https://github.com/tarans65/Penny-Pals" target="_blank">
+              View on GitHub →
+            </a>
+          </div>
+        </div>
+
+        <!-- AML Modeling -->
+        <div class="proj-card">
+          <div class="proj-img">
+            <img src="img/immunocellresearch.png" alt="Cancer research modeling">
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags">
+              <span>ODE Modeling</span><span>Python</span>
+            </div>
+            <h3>Chemo-Immunotherapy Modeling for AML</h3>
+            <p>A differential-equation model capturing cancer–immune–drug interactions, exploring treatment response dynamics.</p>
+            <a class="proj-link" href="https://github.com/tarans65/Leukemia-Research" target="_blank">
+              View on GitHub →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer__inner">
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/taran-srikonda-ab4564234" target="_blank">LinkedIn</a>
+      <a href="https://github.com/tarans65" target="_blank">GitHub</a>
+      <a href="mailto:tsrikonda654@gmail.com">Email</a>
+      <a href="https://linktr.ee/Taran_Sr" target="_blank">LinkTree</a>
+    </div>
+    <p class="footer-copy">© 2025 Taran Srikonda</p>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const overlay = document.querySelector('.nav-overlay');
+  const closeBtn = document.querySelector('.close-btn');
+
+  hamburger.addEventListener('click', () => {
+    overlay.classList.add('active');
+    hamburger.classList.add('hide');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    overlay.classList.remove('active');
+    hamburger.classList.remove('hide');
+  });
+</script>
+
+</body>
+</html>

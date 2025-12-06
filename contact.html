@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Taran Srikonda</title>
+
+  <link rel="stylesheet" href="styles/main1.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <meta name="description" content="Contact page for Taran Srikonda — Duke ECE/CS student working in real-time systems, AI, modeling, and product design." />
+</head>
+
+<body class="contact-page">
+
+  <header>
+    <div class="container nav-container">
+      <a class="brand" href="index.html" aria-label="Home">Taran Srikonda</a>
+
+      <button class="hamburger" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav__list">
+        <li><a href="about.html">About</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+
+      <nav class="nav-overlay">
+        <button class="close-btn">&times;</button>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <section id="contact">
+    <div class="contact-container">
+
+      <h2>Contact Me</h2>
+      <p class="contact-subtitle">
+        Whether you're interested in collaborating, discussing research, or talking about engineering, tech policy, or product design — I’d love to connect.
+      </p>
+
+      <!-- CONTACT FORM (Formspree) -->
+      <form action="https://formspree.io/f/xgvnvaql" method="POST" class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Your email" required>
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <p class="direct-email">
+        Prefer email? Reach me at  
+        <a href="mailto:tsrikonda654@gmail.com">tsrikonda654@gmail.com</a>
+      </p>
+
+      <div class="social-links" style="justify-content:center; margin-top:1rem;">
+        <a href="https://www.linkedin.com/in/taran-srikonda-ab4564234" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/tarans65" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:tsrikonda654@gmail.com" target="_blank">Email</a>
+        <a href="https://linktr.ee/Taran_Sr" target="_blank"><i class="fab fa-linktree"></i></a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container footer__inner">
+      <ul class="social">
+        <li><a href="https://www.linkedin.com/in/taran-srikonda" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/tarans65" target="_blank">GitHub</a></li>
+        <li><a href="mailto:tsrikonda654@gmail.com">Email</a></li>
+      </ul>
+      <p>© <span data-year>2025</span> Taran Srikonda</p>
+    </div>
+  </footer>
+
+
+  <!-- JS for hamburger -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navOverlay = document.querySelector('.nav-overlay');
+    const closeBtn = document.querySelector('.close-btn');
+
+    hamburger.addEventListener('click', () => {
+      navOverlay.classList.add('active');
+      hamburger.classList.add('hide');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      navOverlay.classList.remove('active');
+      hamburger.classList.remove('hide');
+    });
+  </script>
+
+</body>
+
+</html>
