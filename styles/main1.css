@@ -761,3 +761,301 @@ footer {
   color: #444;
   line-height: 1.5;
 }
+
+
+/* =========================================================
+   DARK MODE TOGGLE BUTTON
+========================================================= */
+
+.theme-toggle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  background: #f3f5f9;
+  color: #1a1a1a;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin-left: 1.5rem;
+  flex-shrink: 0;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.08);
+}
+
+/* The icon inside fades + rotates when switching */
+.theme-toggle i {
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.theme-toggle.switching i {
+  transform: rotate(180deg) scale(0.3);
+  opacity: 0;
+}
+
+/* Keep the toggle aligned in the mobile overlay too */
+.nav-overlay .theme-toggle {
+  margin-left: 0;
+  margin-top: 1.3rem;
+}
+
+
+/* =========================================================
+   DARK MODE THEME
+   Activated by adding class "dark" to <body>.
+   Smooth color transitions on the big surfaces.
+========================================================= */
+
+body.dark {
+  background-color: #0f1419;
+}
+
+body.dark,
+body.dark .hero__lede,
+body.dark .work-item p,
+body.dark .about-text p,
+body.dark .timeline-content p,
+body.dark .proj-body p,
+body.dark .proj-body,
+body.dark .work-card p {
+  color: #c9d1d9;
+}
+
+/* Smooth transition for theme switch on major surfaces */
+body,
+header,
+footer,
+.resources,
+.experience,
+.work-card,
+.article-card,
+.proj-card,
+#contact,
+.theme-toggle {
+  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+}
+
+/* Header */
+body.dark header {
+  background: #161b22;
+  border-bottom-color: #30363d;
+}
+
+body.dark .nav__list a {
+  color: #c9d1d9;
+}
+
+body.dark .nav__list a:hover,
+body.dark .nav__list .active {
+  color: #58a6ff;
+}
+
+body.dark .brand {
+  color: #58a6ff;
+}
+
+body.dark .hamburger span {
+  background: #c9d1d9;
+}
+
+/* Toggle button in dark mode */
+body.dark .theme-toggle {
+  background: #21262d;
+  border-color: #30363d;
+  color: #f0c674;
+}
+
+/* Mobile nav overlay */
+body.dark .nav-overlay {
+  background: #161b22;
+}
+
+/* Headings */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark .hero__title,
+body.dark .about-text h2,
+body.dark .resources__title,
+body.dark .experience__title,
+body.dark .section-title,
+body.dark .work-title,
+body.dark .proj-body h3,
+body.dark .timeline-content h3,
+body.dark .contact-container h2 {
+  color: #f0f6fc;
+}
+
+/* "What I work on" section */
+body.dark .resources {
+  background: #161b22;
+}
+
+body.dark .work-card {
+  background: #21262d;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+body.dark .work-card:hover {
+  box-shadow: 0 7px 14px rgba(0,0,0,0.5);
+}
+
+body.dark .work-icon,
+body.dark .work-link {
+  color: #58a6ff;
+}
+
+/* Contact section */
+body.dark #contact {
+  background: #161b22;
+}
+
+body.dark .contact-subtitle {
+  color: #8b949e;
+}
+
+body.dark .contact-form input,
+body.dark .contact-form textarea {
+  background: #0d1117;
+  border-color: #30363d;
+  color: #f0f6fc;
+}
+
+body.dark .contact-form input::placeholder,
+body.dark .contact-form textarea::placeholder {
+  color: #6e7681;
+}
+
+body.dark .contact-form button {
+  background: #1f6feb;
+}
+
+body.dark .contact-form button:hover {
+  background: #388bfd;
+}
+
+body.dark .direct-email a {
+  color: #58a6ff;
+}
+
+/* Social links */
+body.dark .social-links a {
+  color: #c9d1d9;
+}
+
+body.dark .social-links a:hover,
+body.dark .about-text .social-links a {
+  color: #c9d1d9;
+}
+
+body.dark .about-text .social-links a:hover,
+body.dark .social-links a:hover {
+  color: #58a6ff;
+}
+
+/* Footer */
+body.dark footer {
+  border-top-color: #30363d;
+}
+
+body.dark .footer-links a {
+  color: #c9d1d9;
+}
+
+body.dark .footer-links a:hover {
+  color: #58a6ff;
+}
+
+body.dark .footer-copy {
+  color: #8b949e;
+}
+
+/* Articles page */
+body.dark .write-about-item .icon {
+  color: #58a6ff;
+}
+
+body.dark .filter-btn {
+  background: #21262d;
+  color: #c9d1d9;
+}
+
+body.dark .filter-btn.active {
+  background: #1f6feb;
+  color: #fff;
+}
+
+body.dark .article-card {
+  background: #21262d;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+body.dark .article-card:hover {
+  box-shadow: 0 7px 15px rgba(0,0,0,0.5);
+}
+
+body.dark .tag,
+body.dark .proj-tags span {
+  background: #1c2430;
+  color: #58a6ff;
+}
+
+body.dark .date {
+  color: #8b949e;
+}
+
+body.dark .read-more {
+  color: #58a6ff;
+}
+
+/* Projects page */
+body.dark .project-banner {
+  background: #161b22;
+}
+
+body.dark .project-banner-box {
+  background: #21262d;
+  border-left-color: #1f6feb;
+}
+
+body.dark .project-banner-box p {
+  color: #8b949e;
+}
+
+body.dark .proj-card {
+  background: #21262d;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+body.dark .proj-card:hover {
+  box-shadow: 0 7px 18px rgba(0,0,0,0.5);
+}
+
+body.dark .proj-link {
+  color: #58a6ff;
+}
+
+/* About page experience timeline */
+body.dark .experience {
+  background: #161b22;
+}
+
+body.dark .timeline::before,
+body.dark .timeline-item::before {
+  background: #30363d;
+}
+
+body.dark .timeline-item .timeline-icon {
+  background: #f3f5f9;  /* keep logos on light chip so they stay visible */
+}
+
+body.dark .timeline-date {
+  color: #8b949e;
+}
