@@ -7,6 +7,15 @@
   <link rel="stylesheet" href="styles/main1.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <meta name="description" content="Portfolio of Taran Srikonda — Duke ECE/CS, earthquake early-warning research, AI/ML engineering, product design, and educational work." />
+  <script>
+    // Apply saved theme before render to avoid flash
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark-preload');
+    }
+  </script>
+  <style>
+    html.dark-preload body { background-color: #0f1419; }
+  </style>
 </head>
 
 <body>
@@ -26,6 +35,11 @@
       <li><a href="articles.html">Articles</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="index.html#contact" class="nav__cta">Contact</a></li>
+      <li>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </li>
     </ul>
 
     <nav class="nav-overlay">
@@ -166,6 +180,38 @@
     navOverlay.classList.remove('active');
     hamburger.classList.remove('hide');
   });
+</script>
+
+<!-- DARK MODE TOGGLE SCRIPT -->
+<script>
+  (function () {
+    const body = document.body;
+    const toggle = document.querySelector('.theme-toggle');
+    const icon = toggle ? toggle.querySelector('i') : null;
+
+    // Apply saved theme on load
+    document.documentElement.classList.remove('dark-preload');
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark');
+      if (icon) { icon.classList.remove('fa-moon'); icon.classList.add('fa-sun'); }
+    }
+
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        // brief morph animation
+        toggle.classList.add('switching');
+        setTimeout(() => {
+          const isDark = body.classList.toggle('dark');
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+          if (icon) {
+            icon.classList.toggle('fa-moon', !isDark);
+            icon.classList.toggle('fa-sun', isDark);
+          }
+          toggle.classList.remove('switching');
+        }, 200);
+      });
+    }
+  })();
 </script>
 
 </body>
